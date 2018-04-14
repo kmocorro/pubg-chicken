@@ -1,6 +1,6 @@
 # pubg-chicken [![npm 0.0.5](https://img.shields.io/badge/npm-v0.0.11-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
 
-NodeJS API using the official PUBG API
+NodeJS Wrapper using the official PUBG API
 
 ## Installation
 
@@ -44,3 +44,8 @@ For example :
     
     });
 ```
+
+## Status
+**v0.0.11** - API for searching IGN data only
+
+**future version** - working on it to fully utilize PUBG API 
