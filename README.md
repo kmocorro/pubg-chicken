@@ -20,20 +20,38 @@ For example :
       api.setAPIkey('your-api-key-here');
       
       function player(){
-            return new Promise(function(resolve, reject){
-                let requested_playerName = req.params.playerName;
+          return new Promise(function(resolve, reject){
+              let requested_playerName = req.params.playerName;
 
-                resolve(requested_playerName);
-            });
+              resolve(requested_playerName);
+          });
 
-        }
+      }
 
         player().then(function(requested_playerName){
             console.log(requested_playerName);
-
+            
+            /** 
+            * shard parameters: 
+            *
+            * xbox-as - Asia
+            * xbox-eu - Europe
+            * xbox-na - North America
+            * xbox-oc - Oceania
+            * pc-krjp - Korea
+            * pc-jp - Japan
+            * pc-na - North America
+            * pc-eu - Europe
+            * pc-oc - Oceania
+            * pc-kakao - Kakao
+            * pc-sea - South East Asia
+            * pc-sa - South and Central America
+            * pc-as - Asia
+            */
+            
             api.searchPlayerName({
                 playerNames: requested_playerName
-            }).then((apiResponse) => {
+            }, 'pc-as').then((apiResponse) => {
 
                 res.send(apiResponse);
                 
