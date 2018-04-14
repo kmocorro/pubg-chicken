@@ -29,7 +29,7 @@ class Chicken {
      * send request to api pubg server
      */
     requestDetails(shard, endpoint, params) {
-        return new Promise(function(resolve, reject){
+        return new Promise((resolve, reject) => {
 
             let qParams = '';
 
@@ -43,14 +43,14 @@ class Chicken {
                 
                 Accept: 'application/vnd.api+json',
                 Authorization: `Bearer ${this.apiKey}`
-                
+
             };
 
             let resData = '';
 
             const req = https.get({
                 hostname: this.apiURL,
-                path: `shards/${shard}/${endpoint}${qParams}`,
+                path: `/shards/${shard}/${endpoint}${qParams}`,
                 headers,
             }, (res) => {
                 res.setEncoding('utf8');
