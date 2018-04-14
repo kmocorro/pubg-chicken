@@ -15,8 +15,8 @@ const dataParameters = {
         },
     },
 
-    relationships: (params, relationships) => {
-        if(!params || !relationships){
+    map: (params, map) => {
+        if(!params || !map){
             return undefined;
         }
 
