@@ -40,8 +40,10 @@ class Chicken {
             }
 
             const headers = {
-                Authorization: `Bearer ${this.apiKey}`,
-                Accept: 'application/vnd.api+json'
+                
+                Accept: 'application/vnd.api+json',
+                Authorization: `Bearer ${this.apiKey}`
+                
             };
 
             let resData = '';
