@@ -48,28 +48,29 @@ class Chicken {
 
             let resData = '';
 
-            const req = https.get({
+            const apiRequest = https.get({
                 hostname: this.apiURL,
                 path: `/shards/${shard}/${endpoint}${qParams}`,
-                headers,
-            }, (res) => {
-                res.setEncoding('utf8');
-                res.on('data', data => {
+                headers
+
+            }, (apiResponse) => {
+                apiResponse.setEncoding('utf8');
+                apiResponse.on('data', data => {
                     resData += data;
                 });
 
-                res.on('end', () => {
+                apiResponse.on('end', () => {
                     try {
                         const parsedRESdata = JSON.parse(resData);
-                        if(res.statusCode >= 400){
-                            return reject(parsedRESdata);
+                        if(apiResponse.statusCode >= 400){
+                            return resolve(parsedRESdata); // if playerName is incorrect, send response not found.
                         }
                         return resolve(parsedRESdata);
                     } catch (err) {
                         return reject(err);
                     }
                 });
-                req.on('error', e => reject(e));
+                apiRequest.on('error', e => reject(e));
             });
 
         });
