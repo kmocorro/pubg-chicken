@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # pubg-chicken [![npm 0.0.26](https://img.shields.io/badge/npm-v0.0.26-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
-=======
-# pubg-chicken [![npm 0.0.26](https://img.shields.io/badge/npm-v0.0.26-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
->>>>>>> 499bb8269c7af3f959047f0dc3b35702ba16ce98
-=======
-# pubg-chicken [![npm 0.0.26](https://img.shields.io/badge/npm-v0.0.26-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
->>>>>>> 499bb8269c7af3f959047f0dc3b35702ba16ce98
 
 NodeJS Wrapper using the official PUBG API
 
