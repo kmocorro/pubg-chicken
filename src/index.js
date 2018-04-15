@@ -78,6 +78,35 @@ class Chicken {
     }
 
     /**
+     * 
+     * @param {*} apiResponse_matches | matches ID separator
+     */
+    matchesLoop(apiResponse_matches){
+        return new Promise((resolve, reject) => {
+
+            let matches = [];
+
+            //console.log(apiResponse_matches);
+
+            for( let i = 0; i<apiResponse_matches.length; i++){
+
+                matches.push({
+                    link_match_ids: `${this.endpoint.matches}/${apiResponse_matches[i]}`
+                });
+
+                if(apiResponse_matches.length == matches.length){
+                    
+                    //console.log(matches);
+                    
+                    resolve(matches);
+                }
+
+            }
+
+        });
+    }
+
+    /**
      * search player data using name map through the attributes json
      */
     searchPlayerNames(params, shard = this.defaultShard){
@@ -96,10 +125,49 @@ class Chicken {
         );
     }
 
-    // load matches
-    searchMatchesByPlayerName(){
-
+    // search matches, matchesID is required first, before invoking this function, you need to invoke searchPlayerNames and get the matchID
+    searchMatches(matchIds, shard = this.defaultShard){
+        return this.requestDetails(
+            shard,
+            `${this.endpoint.matches}/${matchIds}`
+        )
     }
+
+    // extractMatches
+    extractMatches(params, shard = this.defaultShard){
+        return this.requestDetails(
+            shard,
+            this.endpoint.players,
+            dataParameters.map(params, dataParameters.attributes.players)
+        ).then((apiResponse) => {
+            
+            if(typeof apiResponse.data != 'undefined' && apiResponse.data != null && apiResponse.data.length > 0){
+
+                let consolidated_matches = [];
+            
+                for(let i=0; i<apiResponse.data[0].relationships.matches.data.length;i++){
+
+                    consolidated_matches.push(
+                        apiResponse.data[0].relationships.matches.data[i].id
+                    );
+
+                    if(apiResponse.data[0].relationships.matches.data.length == consolidated_matches.length){
+
+                        let apiResponse_matches = consolidated_matches;
+                        
+                        return this.matchesLoop(
+                            apiResponse_matches
+                        );
+
+                    }
+
+                }
+            }
+
+        });
+    }
+
+
     
 }
 
