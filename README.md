@@ -1,4 +1,4 @@
-# pubg-chicken [![npm 0.0.5](https://img.shields.io/badge/npm-v0.0.26-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
+# pubg-chicken [![npm 0.0.26](https://img.shields.io/badge/npm-v0.0.26-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
 
 NodeJS Wrapper using the official PUBG API
 
@@ -15,6 +15,7 @@ let api = new Chicken();
 ### API Wrappers
 API | Parameters
 ----|----
+```.setAPIkey()``` | ``` .setAPIkey('your-api-key-here') ```
  ```.searchPlayerNames()``` | ```.searchPlayerName({ playerNames: <ign> }, <region-here> ).then((apiResponse) => {}) ``` 
  ```.searchPlayerIds() ``` | ```.searchPlayerIds({ playerIds: <acct-id> }, <region-here> ).then((apiResponse) => {}) ```
  ```.extractMatches()``` | ```.extractMatches({ playerNames: <player-ign> }, <region-here> ).then((matches) => {}) ```
