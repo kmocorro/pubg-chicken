@@ -1,13 +1,7 @@
 const dataParameters = {
     attributes: {
         matches: {
-            playerIds: 'filter[playerIds]',
             gameMode: 'filter[gameMode]',
-            createdAtStart: 'filter[createdAt-start]',
-            createdAtEnd: 'filter[createdAt-end]',
-            sort: 'sort',
-            limit: 'page[limit]',
-            offset: 'page[offset]',
         },
         players: {
             playerIds: 'filter[playerIds]',
