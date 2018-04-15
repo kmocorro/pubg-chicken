@@ -1,5 +1,5 @@
 const dataParameters = {
-    relationships: {
+    attributes: {
         matches: {
             playerIds: 'filter[playerIds]',
             gameMode: 'filter[gameMode]',

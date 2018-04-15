@@ -1,6 +1,6 @@
 {
   "name": "pubg-chicken",
-  "version": "0.0.11",
+  "version": "0.0.17",
   "description": "Epic chicken has found! :sparkles: :chicken:",
   "main": "src/index.js",
   "scripts": {

@@ -78,17 +78,29 @@ class Chicken {
     }
 
     /**
-     * search players 
+     * search player data using name map through the attributes json
      */
-
-    searchPlayerName(params, shard = this.defaultShard){
+    searchPlayerNames(params, shard = this.defaultShard){
         return this.requestDetails(
             shard,
             this.endpoint.players,
-            dataParameters.map(params, dataParameters.relationships.players)
+            dataParameters.map(params, dataParameters.attributes.players)
+        );
+    }
+    
+    searchPlayerIds(params, shard = this.defaultShard){
+        return this.requestDetails(
+            shard,
+            this.endpoint.players,
+            dataParameters.map(params, dataParameters.attributes.players)
         );
     }
 
+    // load matches
+    searchMatchesByPlayerName(){
+
+    }
+    
 }
 
 module.exports = Chicken;
