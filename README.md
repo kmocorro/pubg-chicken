@@ -49,7 +49,7 @@ For example :
             * pc-as - Asia
             */
             
-            api.searchPlayerName({
+            api.searchPlayerNames({
                 playerNames: requested_playerName
             }, 'pc-as').then((apiResponse) => {
 
@@ -64,6 +64,8 @@ For example :
 ```
 
 ## Status
-**v0.0.11** - API for searching IGN data only
+**v0.0.11** - API for searching IGN data only **searchPlayerName**
+
+**v0.0.17** - added searching for player id **searchPlayerIds**, changed *searchPlayerName* to **searchPlayerNames**
 
 **future version** - working on it to fully utilize PUBG API 
