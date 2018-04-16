@@ -2,6 +2,13 @@ const https = require('https');
 const Promise = require('bluebird');
 const dataParameters = require('./dataParameters');
 
+/**
+ *  NodeJS Wrapper for PUBG API
+ * - Kevin Mocorro | kevinmocorro.github@gmail.com | github.com/kmocorro
+ * # Looking for collaboration and mentor :)
+ * 
+ */
+
 class Chicken {
     /**
      * constructing objects
