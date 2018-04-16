@@ -1,4 +1,4 @@
-# pubg-chicken [![npm 0.0.26](https://img.shields.io/badge/npm-v0.0.26-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
+# pubg-chicken [![npm 0.0.30](https://img.shields.io/badge/npm-v0.0.30-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
 
 NodeJS Wrapper using the official PUBG API
 
@@ -19,6 +19,7 @@ API | Parameters
  ```.searchPlayerNames()``` | ```.searchPlayerName({ playerNames: <ign> }, <region-here> ).then((apiResponse) => {}) ``` 
  ```.searchPlayerIds() ``` | ```.searchPlayerIds({ playerIds: <acct-id> }, <region-here> ).then((apiResponse) => {}) ```
  ```.extractMatches()``` | ```.extractMatches({ playerNames: <player-ign> }, <region-here> ).then((matches) => {}) ```
+ ```.searchTelemetry()``` | ```.searchTelemetry(<matchID-from-extractMatches()>, <region-here>).then((apiResponse) => {})```
  
 For example :
 ```javascript
@@ -61,6 +62,20 @@ For example :
       
     });
 ```
+
+For example : (Note: To use **.seartchTelemetry()**, you should have **matchID** results from **.extractMatches()** API)
+```javascript
+    // search player matches IDs using IGN name
+    app.get('/telemetry/:region/:matchID', function(req, res){
+      
+        api.searchTelemetry(req.params.matchID, req.params.region).then((apiResponse) => { 
+                // do something to apiResponse.
+            });
+      
+    });
+```
+
+
 ## Region parameters
 Parameter region/platform | Location
 ------|------
@@ -84,6 +99,8 @@ pc-as | Asia
 **v0.0.17** - Added searching for player id **searchPlayerIds**, changed *searchPlayerName* to **searchPlayerNames**
 
 **v0.0.25** - Added searching for matches IDs **extractMatches**
+
+**v0.0.30** - Added searching for Telemetry for each matchesID **searchTelemetry**
 
 **future version** - working on it to fully utilize PUBG API 
 
