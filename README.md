@@ -1,4 +1,4 @@
-# pubg-chicken [![npm 0.0.31](https://img.shields.io/badge/npm-v0.0.31-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
+# pubg-chicken [![npm 1.0.0](https://img.shields.io/badge/npm-v1.0.0-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
 
 NodeJS Wrapper using the official PUBG API
 
@@ -102,7 +102,9 @@ pc-as | Asia
 
 **v0.0.30** - Added searching for Telemetry for each matchesID **searchTelemetry**
 
-**future version** - working on it to fully utilize PUBG API 
+**v1.0.0** - Released
+
+**SEMVER** - working on it to fully utilize PUBG API 
 - Kevin Mocorro | kevinmocorro.github@gmail.com
 
 
