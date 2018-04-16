@@ -1,6 +1,6 @@
 {
   "name": "pubg-chicken",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "NodeJS Wrapper using the official PUBG API",
   "main": "src/index.js",
   "scripts": {
@@ -11,13 +11,12 @@
     "url": "git+https://github.com/kmocorro/pubg-chicken.git"
   },
   "author": "Kevin Mocorro",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kmocorro/pubg-chicken/issues"
   },
   "homepage": "https://github.com/kmocorro/pubg-chicken#readme",
   "dependencies": {
-    "bluebird": "^3.5.1",
     "https": "^1.0.0"
   },
   "devDependencies": {},

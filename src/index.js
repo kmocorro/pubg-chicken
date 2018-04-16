@@ -1,5 +1,4 @@
 const https = require('https');
-const Promise = require('bluebird');
 const dataParameters = require('./dataParameters');
 
 /**
