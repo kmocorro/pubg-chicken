@@ -1,6 +1,6 @@
 {
   "name": "pubg-chicken",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NodeJS Wrapper using the official PUBG API",
   "main": "src/index.js",
   "scripts": {

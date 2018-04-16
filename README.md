@@ -1,4 +1,4 @@
-# pubg-chicken [![npm 1.0.0](https://img.shields.io/badge/npm-v1.0.0-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
+# pubg-chicken [![npm 1.0.1](https://img.shields.io/badge/npm-v1.0.1-brightgreen.svg)](https://www.npmjs.com/package/pubg-chicken)
 
 NodeJS Wrapper using the official PUBG API
 
