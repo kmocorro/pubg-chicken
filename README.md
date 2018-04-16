@@ -63,7 +63,7 @@ For example :
     });
 ```
 
-For example : (Note: To use **.seartchTelemetry()**, you should have **matchID** results from **.extractMatches()** API)
+For example : (Note: To use **.searchTelemetry()**, you should have **matchID** results from **.extractMatches()** API)
 ```javascript
     // search player matches IDs using IGN name
     app.get('/telemetry/:region/:matchID', function(req, res){
